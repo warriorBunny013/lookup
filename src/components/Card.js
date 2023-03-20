@@ -9,6 +9,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import Tilt from 'react-parallax-tilt';
 export default function Carde({element,onDelete,state,onEdit}){
     const [edit,setEdit]=useState(false)
     const handleClick=()=>{
@@ -35,6 +36,7 @@ export default function Carde({element,onDelete,state,onEdit}){
         content=<Edit onEditSubmit={handleEditSubmit} title={element}/>
     }
     return<>
+     <Tilt>
      <Card  sx={{ pt:4, maxWidth: 345}}>
      <CardMedia
         sx={{ height: 140 }}
@@ -51,7 +53,7 @@ export default function Carde({element,onDelete,state,onEdit}){
         <Button variant="contained" startIcon={<DeleteIcon />} onClick={handleClick}>Delete</Button>
       </CardActions>
      </Card>
-
+     </Tilt>
     {/* <div className="card">
         <img alt="notes" src={`https://picsum.photos/seed/${element.id}/300/200`}/>
         <div>{content}</div>
