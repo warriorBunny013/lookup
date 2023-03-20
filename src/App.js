@@ -6,6 +6,7 @@ import './App.css';
 import {useState} from 'react'
 import Input from './components/Input';
 import Cards from './components/Cards';
+
  // eslint-disable-next-line
 import {Typography,AppBar,Card,CardActions,CardContent,CardMedia,Grid,ToolBar,Container} from '@mui/material'
 import '@fontsource/roboto/300.css';
@@ -56,9 +57,10 @@ function App(){
   useEffect(()=>{
     localStorage.setItem('elements',JSON.stringify(elements))
    },[elements])
-  return (<ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <Container maxWidth="sm">
+  return (<div className='popup' >
+  <ThemeProvider theme={darkTheme}>
+      <CssBaseline/>
+      <Container  maxWidth="sm">
         <Typography  align="center"
               color="text.primary"
               gutterBottom sx={{ pt:4}} display="flex" justifyContent="center" alignItems="center" variant="h4">Reading List</Typography>
@@ -66,6 +68,8 @@ function App(){
         <Cards editElements={editElements} elementey={elements} onDelete={deleteElements}/>
       </Container>
       </ThemeProvider>
+      </div>
+      
   );
 }
 
