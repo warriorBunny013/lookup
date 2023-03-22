@@ -65,7 +65,7 @@ function App(){
               color="text.primary"
               gutterBottom sx={{ pt:4}} display="flex" justifyContent="center" alignItems="center" variant="h4">Reading List</Typography>
         <Input onSubmit={addElement}/>
-        <Cards editElements={editElements} elementey={elements} onDelete={deleteElements}/>
+        <Cards className="cardbox" editElements={editElements} elementey={elements} onDelete={deleteElements}/>
       </Container>
       </ThemeProvider>
       </div>

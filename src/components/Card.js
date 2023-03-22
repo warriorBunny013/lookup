@@ -10,6 +10,8 @@ import Typography from '@mui/material/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import Tilt from 'react-parallax-tilt';
+import '../App.css';
+
 export default function Carde({element,onDelete,state,onEdit}){
     const [edit,setEdit]=useState(false)
     const handleClick=()=>{
@@ -37,7 +39,7 @@ export default function Carde({element,onDelete,state,onEdit}){
     }
     return<>
      <Tilt>
-     <Card  sx={{ pt:4, maxWidth: 345}}>
+     <Card className="cardbox" sx={{ pt:4, maxWidth: 345}}>
      <CardMedia
         sx={{ height: 140 }}
         // image="/static/images/cards/contemplative-reptile.jpg"
