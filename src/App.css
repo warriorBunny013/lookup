@@ -71,7 +71,7 @@
 }
 .popup{
   background: url("https://64.media.tumblr.com/f816c9430a4851bb196e559ade3a99ad/tumblr_paqhc18jmD1xp1j77o1_500.gifv");
-
+   height: 100vh;
 }
 .cardbox{
   background: rgba( 255, 255, 255, 0.25 );

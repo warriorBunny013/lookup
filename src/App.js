@@ -57,15 +57,17 @@ function App(){
   useEffect(()=>{
     localStorage.setItem('elements',JSON.stringify(elements))
    },[elements])
-  return (<div className='popup' >
+
+  
+  return (<div className='popup'>
   <ThemeProvider theme={darkTheme}>
       <CssBaseline/>
-      <Container  maxWidth="sm">
+      <Container   maxWidth="sm">
         <Typography  align="center"
               color="text.primary"
               gutterBottom sx={{ pt:4}} display="flex" justifyContent="center" alignItems="center" variant="h4">Reading List</Typography>
         <Input onSubmit={addElement}/>
-        <Cards className="cardbox" editElements={editElements} elementey={elements} onDelete={deleteElements}/>
+        <Cards  editElements={editElements} elementey={elements} onDelete={deleteElements}/>
       </Container>
       </ThemeProvider>
       </div>
