@@ -24,6 +24,9 @@ const Input=({onSubmit})=>{
             <TextField
             sx={{}}
             name="name"
+            inputProps={{
+                autoComplete: 'none',
+            }}
             type="text" value={text} onChange={e=>setText(e.target.value)} id="outlined-basic" label="Type here.." variant="outlined" />
             {/* <input value={text} onChange={e=>setText(e.target.value)}/> */}
              <Button fullWidth color="primary" type="submit" variant="contained">Add</Button>
