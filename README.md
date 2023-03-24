@@ -2,6 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# About
+A web application to store a reading wishlist in local with automatic image generation.
+
+
+# Demo
+https://user-images.githubusercontent.com/97738453/227109558-6b656b96-9204-4259-bda7-4894fe4f5111.mp4
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -22,6 +31,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
+
+
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
