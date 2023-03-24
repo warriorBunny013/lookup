@@ -6,7 +6,7 @@ import './App.css';
 import {useState} from 'react'
 import Input from './components/Input';
 import Cards from './components/Cards';
-
+import PacmanLoader from "react-spinners/PacmanLoader";
  // eslint-disable-next-line
 import {Typography,AppBar,Card,CardActions,CardContent,CardMedia,Grid,ToolBar,Container} from '@mui/material'
 import '@fontsource/roboto/300.css';
@@ -30,6 +30,13 @@ const getLocalItems=()=>{
   }
 }
 function App(){
+  const[loader,setLoader]=useState(false);
+  useEffect(()=>{
+    setLoader(true);
+    setTimeout(() => {
+       setLoader(false);
+    }, 3000);
+  },[])
   const [elements,setElements]=useState(getLocalItems());
   
   const addElement=(newElement)=>{
@@ -60,7 +67,17 @@ function App(){
 
   
   return (<div className='popup'>
-  <ThemeProvider theme={darkTheme}>
+    {loader ?
+    <PacmanLoader
+    // sx={{ display: 'flex', margin: 'auto'}}
+    className='loader'
+    color={'#36d7b7'}
+    loading={loader}
+    size={40}
+    aria-label="Loading Spinner"
+    data-testid="loader"
+    />: 
+      <ThemeProvider theme={darkTheme}>
       <CssBaseline/>
       <Container   maxWidth="sm">
         <Typography  align="center"
@@ -70,6 +87,8 @@ function App(){
         <Cards  editElements={editElements} elementey={elements} onDelete={deleteElements}/>
       </Container>
       </ThemeProvider>
+      }
+      
       </div>
       
   );
