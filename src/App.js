@@ -35,7 +35,7 @@ function App(){
     setLoader(true);
     setTimeout(() => {
        setLoader(false);
-    }, 3000);
+    }, 5000);
   },[])
   const [elements,setElements]=useState(getLocalItems());
   
