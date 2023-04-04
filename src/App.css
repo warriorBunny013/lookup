@@ -89,3 +89,13 @@
   /* padding-top: 50vh; */
   align-self: center;
 }
+@font-face { 
+  font-family: spaceful; 
+  src: url('SpaceQuestItalic-60Rx.ttf');
+   }  
+.heading{
+  /* font-size: rem; */
+  font-family: spaceful;
+  padding-top: 5rem;
+
+}

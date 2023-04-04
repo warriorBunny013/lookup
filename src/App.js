@@ -2,7 +2,7 @@ import {useEffect} from 'react';
 import * as React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import './App.css';
+
 import {useState} from 'react'
 import Input from './components/Input';
 import Cards from './components/Cards';
@@ -13,6 +13,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import './App.css';
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
@@ -82,7 +83,8 @@ function App(){
       <Container   maxWidth="sm">
         <Typography  align="center"
               color="text.primary"
-              gutterBottom sx={{ pt:4}} display="flex" justifyContent="center" alignItems="center" variant="h4">Reading List</Typography>
+              gutterBottom sx={{ pt:4, fontFamily:'spaceful', fontSize:'3rem'}} display="flex" justifyContent="center" className='heading' alignItems="center">Reading List</Typography>
+        {/* <h1 className='heading'>Reading List</h1> */}
         <Input onSubmit={addElement}/>
         <Cards  editElements={editElements} elementey={elements} onDelete={deleteElements}/>
       </Container>
